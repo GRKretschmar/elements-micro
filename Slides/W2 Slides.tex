@@ -1,0 +1,413 @@
+\documentclass[compress]{beamer}
+%\documentclass[handout]{beamer}
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \mode<beamer>{\setbeamertemplate{blocks}[rounded][shadow=true]}
+  \setbeamertemplate{caption}[numbered]
+  \useoutertheme{infolines}
+  \useoutertheme[subsection=false]{miniframes}
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{eurosym}
+\usepackage{graphicx}
+% set colors
+\definecolor{myNewColorA}{RGB}{0, 45,114}
+\definecolor{myNewColorB}{RGB}{0, 45,114}
+\definecolor{myNewColorC}{RGB}{0, 45,114} % {130,138,143}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\setbeamercolor{date in head/foot}{fg=white}
+\setbeamercolor{page number in head/foot}{fg=white}
+
+
+\titlegraphic{%
+\vspace{0cm}
+    \includegraphics[width=4cm]{logo-vertical2.png}
+}
+
+\usepackage{subcaption}
+% \usepackage{mathrsfs}
+
+\usepackage{dirtytalk}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{threeparttable}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage{colortbl}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\usepackage{pdfpages}
+
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+%\usepackage{enumitem}
+
+%% References - BEGIN
+\usepackage[backend=bibtex8,style=authoryear-icomp,doi=false,url=false,isbn=false,eprint=false]{biblatex}
+\renewbibmacro{in:}{}		% gets rid of the 'In' in front of the journal name
+%\bibliographystyle{natbib}        
+% \bibliography{references.bib}
+
+% diagram (tree)
+\usepackage{tikz}
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white,
+                     bottom color=blue!20},
+  root/.style     = {treenode, font=\Large,
+                     bottom color=red!30},
+  env/.style      = {treenode, font=\ttfamily\normalsize},
+  dummy/.style    = {circle,draw}
+}
+
+\title{Elements of Microeconomics: \\
+       Discussion Section 1} 
+\author{Rudy Kretschmar}
+\date{}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\begin{frame}{Outline}
+
+    Chapter 2: Thinking like an economist
+
+    \begin{itemize}
+        \item How are economists like scientists? 
+        \item How are economists not like scientists?
+    \end{itemize}
+    
+    \medskip 
+
+    Economists work with models; sometimes complicated though ideally simple. We'll start by looking at two foundational models. 
+
+    \medskip
+    
+    Chapter 3: Interdependence and Gains from Trade
+
+    \begin{itemize}
+        \item What is comparitive advantage? Absolute advaantage?
+        \item How do these generate the benefits of specialization and trade?
+    \end{itemize}
+\end{frame}
+
+
+\section{Chapter 2: Thinking like an economist}
+
+
+
+\begin{frame}
+    \frametitle{Circular flow}
+    \centering
+    \includegraphics[width = 0.5\textwidth,keepaspectratio]{circular_flow.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Production possibility frontier}
+    \centering
+    \includegraphics[width = 0.6\textwidth,keepaspectratio]{ppf_example1.png}
+\end{frame}
+
+\begin{frame}{PPF of a firm}
+    Let's start an Italian restaurant that makes pizzas and sandwiches.
+    \begin{enumerate}
+        \item What will our production possibility frontier look like?
+        \item Why will it take the shape that it has?
+        \item How can we read the opportunity cost? Does it matter which part of the PPF we look at?
+        \item Why might the shape change over time?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{CPF of an individual}
+    Now suppose we are \textit{going} to the Italian restaurant with a group of friends, and we want to decide what to order. Pizzas are \$10, sandwiches are \$5, and we have \$100 to spend.
+    \begin{enumerate}
+        \item What will our consumption possibility frontier look like?
+        \item What is the opportunity cost of a pizza? Does it matter where on the CPF we are?
+        \item What will happen to the CPF if we have \$200 to spend?
+        \item What will happen to the CPF if the price of sandwiches increases to \$10?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Circular-flow diagram of the Italian restaurant economy}
+    Suppose the entire economy consists of Italian restaurants: during half of the week we work in one, and during the other half we buy food from them.
+
+    \medskip
+
+    \begin{itemize}
+        \item What does the circular-flow diagram look like?
+        \item What is missing from our model?
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Economists, economics, and economic reality}    
+    Economists are often asked to guide economic policy.
+    \begin{itemize}
+        \item What are positive and normative statements?
+        \item Why might two economists make different suggestions?
+        \item Why might politicians ignore economists' suggestions?
+    \end{itemize}
+\end{frame}
+
+
+\section{Interdependence and the Gains from Trade}
+
+\begin{frame}{Thinking at the margin}
+Something we glossed over in last week's discussion:
+
+\begin{block}{}
+    \begin{center}
+        \textit{Economists think at the margin.}
+    \end{center}
+\end{block}
+
+    More importantly, we believe that \textbf{firms and individuals do the same.
+}
+    \medskip
+    \medskip
+
+    This means when evaluating a decision, we think about what a small change in behavior will do to an outcome.
+
+\end{frame}
+
+% How people make decisions
+\begin{frame}{Absolute advantage}
+\begin{block}{}
+    \textit{Absolute advantage} describes the ability to produce more of a good given a fixed quantity of inputs.
+\end{block}
+    \medskip
+
+Let's consider two restaurants: Franco's Trattoria and Grano Pasta. Both of them can produce two dishes: salads and pasta. Given 1000 minutes of labor time, they can produce the following amounts of each dish:
+
+    \centering
+    \begin{table}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \textbf{Restaurant} & \textbf{Pasta} & \textbf{Salads} \\
+      \hline
+      \textbf{Grano} & 100 & 20 \\
+      \hline
+      \textbf{Franco's} & 200 & 100 \\
+      \hline
+    \end{tabular}
+  \end{table}
+
+    What is their (*cough, marginal) cost, in minutes, to produce pasta and salads?
+\end{frame} 
+
+\begin{frame}{Absolute advantage}
+    Assume that there is a \textit{constant transferability} from one dish to the other:
+    \begin{enumerate}
+        \item Draw the production possibility frontiers for the two restaurants.
+        \item Who has the absolute advantage in producing pasta?
+        \item Who has the absolute advantage in producing salads?
+    \end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Comparative advantage}
+   Before we discuss comparative advantage, let's think about the opportunity cost of each firm for each dish:
+   \begin{enumerate}
+    \item What are the slopes of the two PPFs?
+    \item What is Grano's opportunity cost for producing pasta and salads?
+    \item What is Franco's opportunity cost for producing pasta and salads?
+   \end{enumerate}
+   In other words: what is the \textit{trade-off} that each restaurant faces as they change their production from one dish to another?
+\end{frame} 
+
+\begin{frame}{Comparative advantage}
+    The \textit{opportunity cost} of producing salads is the amount of pasta they could have produced with the same input. In our example, this is constant.
+
+    \medskip
+    
+\begin{block}{}
+    A restaurant has a \textit{comparative advantage} in producing pasta compared to their competitor if their opportunity cost is lower.
+\end{block}
+
+    \medskip
+
+    \begin{enumerate}
+        \item Can a firm have an absolute advantage in both goods?
+        \item Can a firm have a comparative advantage in both goods?
+        \item What is the relationship between the comparative advantage in good A and good B?
+    \end{enumerate}
+\end{frame} 
+
+\begin{frame}{Comparative advantage}
+\begin{itemize}
+    \item   The comparative advantage in producing good A is the \textit{inverse} of the comparative advantage in producing good B.
+    \item     If the comparative advantage in good A is high, the comparative advantage for good B must be low.
+
+\end{itemize}
+
+    \medskip
+
+    Comparative advantage depends on the \textit{opportunity cost}: these concepts are linked.
+\end{frame} 
+
+\begin{frame}{Comparative advantage}
+    Since most customers like to order a salad with their pasta, Franco's and Grano both want to offer both salads and pasta (not necessarily in equal quantities).
+
+    \medskip
+
+    If both spend half their resources on each dish, what is their output?
+
+    \medskip
+
+    Now suppose the two restaurants can trade with each other. What is one set of productions, and one possible trade, which would leave them both better off?
+
+\end{frame} 
+
+\begin{frame}{Comparative advantage}
+    When they both split their 1000 minutes 50/50 between the two dishes, their output is:
+
+    \begin{table}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \textbf{Restaurant} & \textbf{Pasta} & \textbf{Salads} \\
+      \hline
+      \textbf{Grano} & 50 & 10 \\
+      \hline
+      \textbf{Franco's} & 100 & 50 \\
+      \hline
+      \textbf{Total output} & 150 & 60 \\
+      \hline
+    \end{tabular}
+    \caption{50/50 split}
+  \end{table}
+
+  Now suppose the two restaurants can trade with each other. What is one set of productions, and one possible trade, which would leave them both better off?
+\end{frame} 
+
+\begin{frame}{Possible trade}
+    There are many possible answers to this last question, but let's go back to our principle at the beginning of the discussion, and \textit{think at the margin}.
+    \begin{itemize}
+        \item Grano produces 1 fewer salads and 5 more steaks
+        \item Franco's produces 2 fewer steaks, and 1 more salad
+    \end{itemize}
+    Then their production is:
+
+    \begin{table}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \textbf{Restaurant} & \textbf{Pasta} & \textbf{Salads} \\
+      \hline
+      \textbf{Grano} & 55 & 9 \\
+      \hline
+      \textbf{Franco's} & 98 & 51 \\
+      \hline
+      \textbf{Total output} & 153 & 60 \\
+      \hline
+    \end{tabular}
+    \caption{Possible trade}
+  \end{table}
+
+    Total production has gone up!
+\end{frame} 
+
+\begin{frame}{Possible trade}
+    Which trade would leave them both better off?
+
+    \medskip
+
+    Say Grano trades 3 pastas to Franco's in exchange for one salad:
+
+    \begin{table}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \textbf{Restaurant} & \textbf{Pasta} & \textbf{Salads} \\
+      \hline
+      \textbf{Grano} & 52 & 10 \\
+      \hline
+      \textbf{Franco's} & 101 & 50 \\
+      \hline
+    \end{tabular}
+    \caption{Gains of trade}
+  \end{table}
+
+    They both have the same amount of salads as before, but more steaks! So we can say that they are each better off.
+
+    \medskip
+    
+    Should they continue to specialize?
+
+\end{frame} 
+
+\begin{frame}{Price of trade}
+    Here we just asserted a trade that would make both parties better off in terms of the amount of each dish. But how can we know both parties will agree to the trade?
+    
+    \medskip
+
+    This is determined by the price of each good. In the example we gave, the ``price'' of one salad was 3 steaks.
+
+    \begin{enumerate}
+        \item What if the price of 1 salad was 3.5 pastas?
+        \item What if the price of 1 salad was 1 pasta?
+        \item What if the price of 1 salad was 6 pasta?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Price of trade}
+    The first example would still leave both parties better off, but the second two would not.
+
+    \medskip
+
+    We are not ready yet to discuss where prices come from, but we do have a general rule:
+
+    \begin{center}
+        \textit{For trade to make both parties better off, the price must lie between the two opportunity costs.}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{Discussion questions}
+
+\begin{enumerate}
+    \item Should Kevin Durant wash his own car?
+    \item Should the U.S. trade with other countries?
+    \item Should a chef build his own house?
+    \item Should I make my own clothes?
+    \item Should you be teaching this class?
+\end{enumerate}
+
+    \medskip
+
+    \begin{block}{The main takeaway from this chapter:}
+        \textit{Due to comparative advantage, specialization and trade can leave everyone participating better off.}
+    \end{block}
+
+\end{frame} 
+
+
+\end{document}
+     
+
+
