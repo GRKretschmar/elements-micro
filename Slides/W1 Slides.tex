@@ -1,0 +1,337 @@
+\documentclass[compress]{beamer}
+%\documentclass[handout]{beamer}
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \mode<beamer>{\setbeamertemplate{blocks}[rounded][shadow=true]}
+  \setbeamertemplate{caption}[numbered]
+  \useoutertheme{infolines}
+  \useoutertheme[subsection=false]{miniframes}
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pifont}
+\usepackage{amssymb}
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{eurosym}
+\usepackage{graphicx}
+% set colors
+\definecolor{myNewColorA}{RGB}{0, 45,114}
+\definecolor{myNewColorB}{RGB}{0, 45,114}
+\definecolor{myNewColorC}{RGB}{0, 45,114} % {130,138,143}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\setbeamercolor{date in head/foot}{fg=white}
+\setbeamercolor{page number in head/foot}{fg=white}
+
+
+\titlegraphic{%
+\vspace{0cm}
+    \includegraphics[width=4cm]{logo-vertical2.png}
+}
+
+\usepackage{subcaption}
+% \usepackage{mathrsfs}
+
+\usepackage{dirtytalk}
+\usepackage{comment}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{threeparttable}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage{colortbl}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\usepackage{pdfpages}
+
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+%\usepackage{enumitem}
+
+%% References - BEGIN
+\usepackage[backend=bibtex8,style=authoryear-icomp,doi=false,url=false,isbn=false,eprint=false]{biblatex}
+\renewbibmacro{in:}{}		% gets rid of the 'In' in front of the journal name
+%\bibliographystyle{natbib}        
+% \bibliography{references.bib}
+
+% diagram (tree)
+\usepackage{tikz}
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white,
+                     bottom color=blue!20},
+  root/.style     = {treenode, font=\Large,
+                     bottom color=red!30},
+  env/.style      = {treenode, font=\ttfamily\normalsize},
+  dummy/.style    = {circle,draw}
+}
+
+\title{Elements of Microeconomics: \\
+       Discussion Section 1} 
+\author{Rudy Kretschmar}
+\date{August 29, 2025}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{comment}
+
+\begin{frame}{A little bit about me...}
+
+    
+        \centering
+        \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{img1.jpg}
+        \end{minipage}\hfill
+        \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{img2.jpg}
+        \end{minipage}
+
+        \vspace{0.5em}
+
+        \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{img3.jpg}
+        \end{minipage}\hfill
+        \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{img4.jpg}
+        \end{minipage}
+
+    
+\end{frame}
+
+\end{comment}
+
+
+\begin{frame}{Outline}
+    This week will cover chapters 1 of the Mankiw textbook:
+    \begin{enumerate}
+        \item Ten principles of economics
+        %\item Thinking like an economist
+    \end{enumerate}
+
+    \medskip
+
+    Essentially just a gentle introduction: 
+    \begin{itemize}
+        \item What is economics?
+        \item What do economists do?
+        \item How do economists think? (More on this next week)
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Main point}
+    \centering
+    Main takeaway from this week:
+
+    \vspace{12pt}
+
+    \Large \textit{A little bit of intuition goes a long way.}
+
+    \bigskip
+
+    \normalsize There is usually a nice everyday analogy for questions in microeconomics. 
+\end{frame}
+
+
+\section{Chapter 1: Ten Principles}
+
+% How people make decisions
+\begin{frame}{How people make decisions}
+    \begin{block}{1. People face trade-offs.}
+ \textit{       There are finite and scarce resources.}
+    \end{block}
+
+    \begin{block}{2. The cost of something is what you give up to get it.}
+\textit{        Everything is opportunity cost!
+}    \end{block}
+
+    \begin{block}{3. Rational people think at the margin}
+\textit{        What will a small change in X do to Y?
+}    \end{block}
+
+    \begin{block}{4. People respond to incentives}
+\textit{        How can we change behavior?
+}    \end{block}
+\end{frame} 
+
+% How people interact
+\begin{frame}{How people interact}
+    This is the bread and butter of microeconomics!
+    
+    \medskip
+
+    \begin{block}{5. Trade can make everyone better off.}
+\textit{        Everyone can do what they do best.
+}    \end{block}
+
+    \begin{block}{6. Markets are usually a good way to organize economic activity.}
+\textit{        Markets solve the information problem.
+}    \end{block}
+
+    \begin{block}{7. Governments can improve market outcomes.}
+\textit{        What happens when individuals do not internalize their costs?
+}    \end{block}
+\end{frame} 
+
+
+
+% Economy as a whole
+\begin{frame}{How the economy as a whole works}
+    Microeconomics aggregates up to macroeconomics.
+
+    \medskip
+
+    \begin{block}{8. A country's standard of living depends on its ability to produce goods and services.}
+\textit{        Why do we see such large differences between countries?
+}    \end{block}
+
+    \begin{block}{9. Prices rise when the government prints too much money.}
+\textit{        Too much money chasing too few goods is one cause of inflation.
+}    \end{block}
+
+    \begin{block}{10. Short-run trade-off between inflation and unemployment.}
+\textit{        The ``Phillips Curve."
+}    \end{block}
+\end{frame} 
+
+\begin{frame}{Opportunity Cost}
+You are trying to decide whether to go on a beach trip during your first spring break. What costs do you need to consider? 
+\end{frame}
+
+\begin{frame}{Opportunity Cost}
+    You are trying to decide whether to go on a beach trip during your first spring break. What costs do you need to consider? 
+
+    \medskip
+
+    \begin{enumerate}
+        \item Dollar cost of the vacation: transportation, food, renting a house \dots
+        \item Money you could make if you worked your part-time job instead
+        \item Studying you could get done: preparation for finals, work on semester projects, etc.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{The Margin}
+
+    Speculate on whether or not you think the marginal cost or benefit of the specified item is large or small:
+
+\begin{enumerate}
+    \item The marginal benefit of your first glass of water for the day
+    \item The marginal benefit of your seventeenth glass of water for the day 
+    \item The cost of streaming an additional movie when you already have netflix
+    \item The cost of streaming an additional movie on a streaming service you don't already own
+    \item The marginal benefit of your first hour of studying for your upcoming econ 102 exam
+    \item The marginal cost of your 30th hour studying in a row
+    \item For an airline, the cost of flying one additional passenger on a flight that is not fully booked
+    \item For an aireline, the cost of flying one additional passenger when the current flight is fully booked
+    
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Trade-offs}
+What is the source of trade-offs? Can you give an example from your own life?
+\end{frame}
+
+\begin{comment}
+
+
+\section{Chapter 2: Thinking like an economist}
+
+\begin{frame}{The economist as scientist}
+
+    How are economists like scientists? 
+    How are economists not like scientists?
+
+    \medskip
+
+    \begin{block}{“Imagine how much harder physics would be if electrons had feelings.”}
+        - Richard Feynman, theoretical physicist
+    \end{block}
+
+    \medskip
+
+    Economists work with models, which rest on assumptions. Let's look at a few.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Circular flow}
+    \centering
+    \includegraphics[width = 0.5\textwidth,keepaspectratio]{model1.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Production possibility frontier}
+    \centering
+    \includegraphics[width = 0.6\textwidth,keepaspectratio]{model2.png}
+\end{frame}
+
+\begin{frame}{PPF of a firm}
+    Let's start an Italian restaurant that makes pizzas and sandwiches.
+    \begin{enumerate}
+        \item What will our production possibility frontier look like?
+        \item Why will it take the shape that it has?
+        \item How can we read the opportunity cost? Does it matter which part of the PPF we look at?
+        \item Why might the shape change over time?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{CPF of an individual}
+    Now suppose we are \textit{going} to the Italian restaurant with a group of friends, and we want to decide what to order. Pizzas are \$10, sandwiches are \$5, and we have \$100 to spend.
+    \begin{enumerate}
+        \item What will our consumption possibility frontier look like?
+        \item What is the opportunity cost of a pizza? Does it matter where on the CPF we are?
+        \item What will happen to the CPF if we have \$200 to spend?
+        \item What will happen to the CPF if the price of sandwiches increases to \$10?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Circular-flow diagram of the Italian restaurant economy}
+    Suppose the entire economy consists of Italian restaurants: during half of the week we work in one, and during the other half we buy food from them.
+
+    \medskip
+
+    \begin{itemize}
+        \item What does the circular-flow diagram look like?
+        \item What is missing from our model?
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Economists, economics, and economic reality}    
+    Economists are often asked to guide economic policy.
+    \begin{itemize}
+        \item What are positive and normative statements?
+        \item Why might two economists make different suggestions?
+        \item Why might politicians ignore economists' suggestions?
+    \end{itemize}
+\end{frame}
+\end{comment}
+
+\end{document}      
+
+
