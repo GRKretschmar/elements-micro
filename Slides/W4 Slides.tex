@@ -1,0 +1,427 @@
+\documentclass[compress]{beamer}
+%\documentclass[handout]{beamer}
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \mode<beamer>{\setbeamertemplate{blocks}[rounded][shadow=true]}
+  \setbeamertemplate{caption}[numbered]
+  \useoutertheme{infolines}
+  \useoutertheme[subsection=false]{miniframes}
+} 
+
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{eurosym}
+\usepackage{graphicx}
+% set colors
+\definecolor{myNewColorA}{RGB}{0, 45,114}
+\definecolor{myNewColorB}{RGB}{0, 45,114}
+\definecolor{myNewColorC}{RGB}{0, 45,114} % {130,138,143}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\setbeamercolor{date in head/foot}{fg=white}
+\setbeamercolor{page number in head/foot}{fg=white}
+
+
+\titlegraphic{%
+\vspace{0cm}
+    \includegraphics[width=4cm]{logo-vertical2.png}
+}
+
+\usepackage{subcaption}
+% \usepackage{mathrsfs}
+
+\usepackage{dirtytalk}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{threeparttable}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage{colortbl}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\usepackage{pdfpages}
+
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+%\usepackage{enumitem}
+
+
+
+% diagram (tree)
+\usepackage{tikz}
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white,
+                     bottom color=blue!20},
+  root/.style     = {treenode, font=\Large,
+                     bottom color=red!30},
+  env/.style      = {treenode, font=\ttfamily\normalsize},
+  dummy/.style    = {circle,draw}
+}
+
+% Title page details: 
+\title{Chapter 5: Elasticity and applications} 
+\author{Rudy Kretschmar \\
+    Discussion section 1}
+\date{\today}
+
+\begin{document}
+
+% Title page
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\begin{frame}{Concept Review from Assingment 1}
+
+    \begin{enumerate}
+        \item Efficiency: "the property of society getting the most it can from its scarce resources"
+        \item Opportunity Cost: State What it is!!! State why the setting increases or decreases it!
+        \item Marginal Analysis:
+        \begin{itemize}
+            \item What is the Marginal Benefit of X
+            \item What is the Marginal Cost of X
+            \item When do I do X? ($MB > MC$)
+            \item When dynamics are involved, it's the standard of the field to talk about the static action ("doing laundry, not waiting to do laundry")
+        \end{itemize}
+        \item Trade: Beneficial for both countries (consuming outside of their PPF's) when exchange rate is between opportunity costs. However, why might it be reasonable to assume we don't see a lot of unfavorable trade?
+    \end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Outline}
+    
+    \begin{block}{Elasticity is an intuitive concept: }
+        How does an agent (consumer or producer) change their behavior in response to change of their environment (prices, incomes)?
+    \end{block}
+
+    \medskip
+
+    We have different notions of elasticity. Today we will talk about \textit{price elasticity}. The same concept is extended to \textit{income elasticity} and \textit{cross-price elasticity} in your textbook. The idea is the same.
+\end{frame}
+
+\begin{frame}{Price elasticity}
+    \begin{block}{We can consider price elasticity of \textit{supply} and \textit{demand}}
+        \begin{itemize}
+            \item \textbf{Price elasticity of demand}: how much $Q_D$ for a good responds to a change in the price of that good.
+            \item \textbf{Price elasticity of supply}: how much $Q_S$ for a good responds to a change in the price of that good.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Price Elasticity}
+    A consumer or seller may be price \textbf{elastic} or \textbf{inelastic} for a particular good:
+    \begin{block}{Elastic:}
+        Quantity demanded/supplied responds \textit{a lot} to changes in price. \\
+        \medskip
+\textit{        Example: Travel
+}    \end{block}
+    \begin{block}{Inelastic:}
+        Quantity demanded/supplied respond \textit{little} to changes in price. \\
+        \medskip
+\textit{        Example: Insulin
+}    \end{block}
+\end{frame}
+
+\begin{frame}{Elasticity Influences}
+    What factors will influence a good's elasticity?
+
+    \begin{enumerate}
+        \item \textbf{Availability of close substitutes}: other kinds of trucks, cars, bikes, etc.
+        \item \textbf{Necessities vs. luxuries}: do you need it for work? For fun?
+        \item \textbf{Market definition}: Are we considering the market for Ford F150s? For pickup trucks? For motor vehicles?)
+        \item \textbf{Time horizon}: In the short run, maybe we need a pickup; in the long-run, maybe we retool our lives to accomadate a different car or no car at all
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Calculating elasticity}
+    We have a simple equation to find an elasticity:
+    \medskip
+    \[X\; \text{Elasticity of}\; Y = | \frac{\%\Delta X}{\% \Delta Y}|\]
+    
+\vspace{3mm}
+
+The price elasticity of demand is calculated as follows:
+    $$
+    \text{\textit{Price} elasticity of demand} = |\frac{\% \Delta Q_D}{\% \Delta P}|
+    $$
+
+\end{frame}
+
+ 
+ \begin{frame}{Calculating Elasticity}
+    \begin{block}{First, we need to know how to calculate the percent change of a price or quantity:}
+
+    If good A used to cost \$10, and now it costs \$14, what is the percentage change?
+    $$
+    \dfrac{\text{Change in price}}{\text{Original price}} * 100\% = \dfrac{\$14 - \$10}{\$10} * 100\% = 40\%
+    $$
+    \end{block}
+\medskip
+    In our elasticity formula, we do not need to worry about multiplying by 100\%.
+\end{frame}
+
+\begin{frame}{Price elasticity of demand}
+    Consider two points along a demand curve:
+    \begin{itemize}
+        \item A: price is \(P_A = 12\) and quantity demanded is \(Q_A = 60\)
+        \item B: \(P_B = 8\) and \(Q_B = 80\)
+    \end{itemize}
+    \medskip
+    We can use our formula to calculate the price elasticity of demand of:
+    \begin{enumerate}
+        \item Moving from A to B
+        \item Moving from B to A
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Calculating price elasticity of demand}
+\begin{enumerate}
+    \item Moving from A to B: \(P_e = |\frac{\frac{80-60}{60}}{\frac{8-12}{12}} |= |\frac{\frac{1}{3}}{-\frac{1}{3}}| = |-1| = 1\)
+    \item Moving from B to A: \(P_e = |\frac{\frac{60-80}{80}}{\frac{12-8}{8}}| = |\frac{-\frac{1}{4}}{\frac{1}{2}}| = |-\frac{1}{2}| = \frac{1}{2}\)
+\end{enumerate}
+\begin{center}
+    ** We get two different price elasticities! What gives?? **
+\end{center}
+
+    
+\end{frame}
+
+
+\begin{frame}{The midpoint method}
+    To avoid problems caused by calculating elasticities using different bases (as we saw in the previous example), we can use the midpoint method.
+
+\medskip
+
+\begin{block}{The midpoint method:}
+Use the average of the two  points as the base in percentage calculations:
+
+\[ \text{Price elasticity of demand} = \frac{\tfrac{Q_2 - Q_1}{(Q_2 + Q_1)/2}}{\tfrac{P_2 - P_1}{(P_2 + P_1)/2}} \]
+\end{block}
+
+\medskip
+
+This is the formula we will use in this class!
+\end{frame}
+\begin{frame}{The midpoint method}
+   \begin{block}{ Using the midpoint method with our previous example:}
+    \begin{itemize}
+        \item $P_A = 12$ and $Q_A = 60$
+        \item $P_B = 8$ and $Q_B = 80$
+    \end{itemize}
+    \end{block}
+
+    \begin{enumerate}
+        \item What is the new base price?
+            \begin{itemize}
+                \item<2-> \(\frac{P_A + P_B}{2} = \frac{12+8}{2} = \$10\)
+            \end{itemize}
+
+        \item What is the new base quantity?
+            \begin{itemize}
+                \item<3-> \(\frac{Q_A + Q_B}{2} = \frac{60+80}{2} = 70\)
+            \end{itemize}
+
+        \item What is the percent change for quantity demanded?
+            \begin{itemize}
+                \item<4-> \(\frac{80-60}{70} = \frac{2}{7}\)
+            \end{itemize}
+
+        \item What is the percent change for price?
+            \begin{itemize}
+                \item<5-> \(\frac{12-8}{10} = \frac{2}{5}\)
+            \end{itemize}
+    \end{enumerate}
+
+    \only<6->{%
+    \begin{center}
+        \textbf{Whether we move from A to B or B to A we get \(P_e = \tfrac{2/7}{2/5} = \tfrac{5}{7}\)}
+    \end{center}}
+\end{frame}
+
+    \begin{frame}{The point method}
+        We can also calculate the elasticity of demand at a particular point on the demand curve:
+        \[\text{Price elasticity of Demand} = |\frac{\Delta Q_D}{\Delta P}| \times \frac{P}{Q_D}\]
+        \begin{itemize}
+            \item $\frac{\Delta Q_D}{\Delta P}$ is the reciprocal slope of the demand curve at the point $(Q_D,P)$
+            \begin{itemize}
+                \item (The slope of the demand curve is $\frac{\Delta P}{\Delta Q_D}$)
+            \end{itemize}
+        \end{itemize}
+\begin{center}
+    Let's do an example...
+\end{center}
+
+    \end{frame}
+
+    \begin{frame}{The point method}
+        Imagine we are given the following demand equation and point on the curve:
+        \begin{itemize}
+            \item Demand equation: \(P = -\frac{1}{2} Q + 10\)
+            \item Point A: $Q_D = 80 \quad P = 8$ 
+        \end{itemize}
+
+
+        \begin{block}{What is the price elasticity of demand at point A on the demand curve?}
+                \begin{align}
+                    \text{Price elasticity of demand} &= \frac{1}{|\text{slope}|} \times \frac{P}{Q_D} \\
+                    & = \frac{1}{|-\frac{1}{2}|} \times \frac{8}{80} \\
+                    & = |-2| \times \frac{1}{10} \\
+                    & = |-\frac{1}{5}| \\
+                    & = \frac{1}{5}
+                \end{align}
+            
+        \end{block}
+        
+    \end{frame}
+
+
+\begin{frame}{Cases of elasticity of demand}
+Demand might be:
+    \begin{itemize}
+     \item \textbf{Elastic}: price change of $X\%$ $\to$ demand change greater than $X\%$ 
+     \begin{itemize}
+         \item Elasticity $>$ 1
+     \end{itemize}
+     \item \textbf{Inelastic}: price change of $X\%$ $\to$ demand change less than $X\%$ 
+     \begin{itemize}
+         \item Elasticity $<$ 1
+     \end{itemize}
+     \item \textbf{Unit elastic:} price change of $X\%$ $\to$ demand change of $X\%$
+     \begin{itemize}
+         \item Elasticity = 1
+     \end{itemize}
+     \item \textbf{Perfectly inelastic}: price change has no impact on demand
+     \begin{itemize}
+         \item Elasticity = 0
+     \end{itemize}
+     \item \textbf{Perfectly elastic:} small price change has enormous (infinite!) impact on demand
+     \begin{itemize}
+         \item This one is tricky...
+     \end{itemize}
+    \end{itemize}
+
+\medskip
+    \begin{center}
+        Let's draw them!
+    \end{center}
+\end{frame}
+
+\begin{frame}{Revenue}
+The total revenue of a firm depends on the price and quantity sold of their products:
+
+\[\text{Total revenue} = P \times Q\]
+
+So, when a firm increases or decreases their prices $P$, the associated change in quantity sold $Q$ will determine their change in total revenue. \\
+
+\medskip
+
+What does total revenue look like on a graph?
+    
+\end{frame}
+
+\begin{frame}{Revenue}
+In order to determine the change in $Q$ caused by the change in $P$, we must use the price elasticity of demand...
+\begin{block}{When demand is inelastic:}
+    If price increases, total revenue increases
+\end{block}    
+\begin{block}{When demand is elastic:}
+    If price increases, total revenue decreases
+\end{block}
+\begin{block}{When demand is unit elastic:}
+    Total revenue remains constant when price changes
+\end{block}
+\end{frame}
+
+\begin{frame}{Revenue}
+    Let's say the price of a coffee at Starbucks initially was $P_A$, but has just doubled to $P_B = 2\times P_A$.
+
+    \begin{block}{How will total revenue change when:}
+    \begin{enumerate}
+        \item Demand is elastic: quantity decreases by 75\%
+        \item Demand is inelastic: quantity decreases by 25\%
+        \item Demand is unit elastic
+    \end{enumerate}
+        
+    \end{block}
+\end{frame}
+
+\begin{frame}{Different Elasticities}
+    We have focused on the \textit{Price elasticity of demand}, but there are others.
+
+\medskip
+Income elasticity of demand:
+    \begin{itemize}
+        \item Positive for normal goods, negative for inferior goods
+        \item $\text{income elasticity of demand} = |\dfrac{\%~\Delta Q_D}{\%~\Delta~\text{Income}}|$
+    \end{itemize}
+
+    \medskip
+    \medskip
+
+    Cross-price elasticity of demand:
+    \begin{itemize}
+        \item Positive for substitutes, negative for complements
+        \item $\text{CP elasticity of demand} = |\dfrac{\%~\Delta Q_{D1}}{\%~\Delta P_2}|$
+    \end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}{Price elasticity of supply}
+
+
+\begin{block}{We use a very similar formula:}
+\[    \text{Price elasticity of supply} = |\dfrac{\%~\Delta Q_S}{\%~\Delta P}|
+\]
+\end{block}
+
+\begin{block}{Firms may have supply that is:}
+    \begin{itemize}
+        \item \textbf{Elastic}: an X\% change in price $\to$ $>X\%$ change in supply
+        \begin{itemize}
+            \item Elasticity $>$ 1
+        \end{itemize}
+        \item \textbf{Inelastic: }an X\% change in price $\to$ $<X\%$ change in supply
+        \begin{itemize}
+            \item Elasticity $<$ 1
+        \end{itemize}
+        \item \textbf{Unit elastic:} an X\% change in price $\to$ $X\%$ change in supply
+        \begin{itemize}
+            \item Elasticity = 1
+        \end{itemize}
+        \item \textbf{Perfectly inelastic}: any change in price $\to$ no change in supply 
+        \begin{itemize}
+            \item Elasticity = 0
+        \end{itemize}
+                \item \textbf{Perfectly elastic}: any change in price $\to$ enormous change in supply
+        \begin{itemize}
+            \item This one is tricky...
+        \end{itemize}
+    \end{itemize}
+\end{block}
+    
+\end{frame}
+
+\end{document}
