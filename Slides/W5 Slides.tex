@@ -1,0 +1,338 @@
+\documentclass[compress]{beamer}
+%\documentclass[handout]{beamer}
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \mode<beamer>{\setbeamertemplate{blocks}[rounded][shadow=true]}
+  \setbeamertemplate{caption}[numbered]
+  \useoutertheme{infolines}
+  \useoutertheme[subsection=false]{miniframes}
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{comment}
+% set colors
+\definecolor{myNewColorA}{RGB}{0, 45,114}
+\definecolor{myNewColorB}{RGB}{0, 45,114}
+\definecolor{myNewColorC}{RGB}{0, 45,114} % {130,138,143}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\setbeamercolor{date in head/foot}{fg=white}
+\setbeamercolor{page number in head/foot}{fg=white}
+
+
+\titlegraphic{%
+\vspace{0cm}
+    \includegraphics[width=4cm]{logo-vertical2.png}
+}
+
+\usepackage{subcaption}
+% \usepackage{mathrsfs}
+
+\usepackage{dirtytalk}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{threeparttable}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage{colortbl}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\usepackage{pdfpages}
+
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+%\usepackage{enumitem}
+
+
+
+% diagram (tree)
+\usepackage{tikz}
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white,
+                     bottom color=blue!20},
+  root/.style     = {treenode, font=\Large,
+                     bottom color=red!30},
+  env/.style      = {treenode, font=\ttfamily\normalsize},
+  dummy/.style    = {circle,draw}
+}
+
+% Title page details: 
+\title{Chapters 6 and 7: Supply, Demand, and Government Policies} 
+\author{Rudy Kretschmar \\
+    Discussion section 1}
+\date{\today}
+
+\begin{document}
+
+% Title page
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\begin{frame}{Review: Elasticities}
+
+    \begin{block}{The midpoint method:}
+    Use the average of the two  points as the base in percentage calculations:
+
+    \[ \text{Price elasticity of demand} = \frac{\tfrac{Q_2 - Q_1}{(Q_2 + Q_1)/2}}{\tfrac{P_2 - P_1}{(P_2 + P_1)/2}} \]
+    \end{block}
+
+
+
+    \begin{block}{Clarification}
+        \begin{enumerate}
+            \item You can ignore the absolute values; I find these concepts more intuitive without them
+        \end{enumerate}
+        
+    \end{block}
+
+\end{frame}
+
+\begin{frame}{Review: Elasticities}
+
+
+    \begin{block}{The point method:}
+
+        \[ \text{Price elasticity of demand} = \frac{\tfrac{Q_2 - Q_1}{(Q_2 + Q_1)/2}}{\tfrac{P_2 - P_1}{(P_2 + P_1)/2}} \]
+
+        \medskip
+
+        \[\text{Price elasticity of Demand} = \frac{\Delta Q_D}{\Delta P} \times \frac{P}{Q_D}\]
+
+        
+
+    \end{block}
+
+    \begin{block}{Clarification}
+        \begin{enumerate}
+            \item This two are related! Do you see the intution from calculus
+            \item Be careful! Pay attention to whether you need the slope from the inverse demand curve or the normal one
+        \end{enumerate}
+        
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}{Outline}
+    Today we will talk about government policies and their unintended consequences:
+    \begin{enumerate}
+        \item Price controls
+        \item Social Welfare
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Price Controls}
+\begin{block}{Two kinds of price controls:}
+    \begin{itemize}
+        \item Price \textit{Ceiling}: a legal \textbf{maximum} on the price at which a good can be sold
+        \item Price \textit{Floor}: a legal \textbf{minimum} on the price at which a good can be sold
+    \end{itemize}
+\end{block}
+
+\begin{block}{Price controls can be:}
+    \begin{itemize}
+        \item \textit{Binding}: market forces push price towards equilibrium, but due to the price control it is unable by law to reach equilibrium
+        \item \textit{Non Binding:} market forces push price towards equilibrium, and the price controls do not prevent reaching equilibrium
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Price Controls}
+    Let's consider the market for coffee: In equilibrium
+    \begin{itemize}
+        \item $Q^* = 100$
+        \item $P^* = 3$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Price controls}
+Let's consider 2 cases of a price \textit{ceiling}:
+\begin{itemize}
+\item $P = 2.5$
+\item $P = 3.5$
+\end{itemize}
+
+\begin{block}{In either case}
+    \begin{itemize}
+        \item What will $Q_D$ and $Q_S$ be?
+        \item Does the ceiling cause a shortage or surplus?
+        \item Is the policy binding?
+    \end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Price Controls}
+Let's consider 2 cases of a price \textit{floor}:
+\begin{itemize}
+\item $P = 2.5$
+\item $P = 3.5$
+\end{itemize}
+
+\begin{block}{In either case}
+    \begin{itemize}
+        \item What will $Q_D$ and $Q_S$ be?
+        \item Does the ceiling cause a shortage or surplus?
+        \item Is the policy binding?
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{comment}
+\begin{frame}{Taxes}
+    In the U.S. (Not necessarily in other countries!) direct price controls are relatively rare.
+
+\medskip
+
+Taxes are much more common: \textbf{What is a tax?}
+
+\medskip
+
+\begin{block}{When taxes are levied we are concerned with:}
+    The \textbf{Incidence of the tax}: how the burden of the tax is shared among participants (buyers \& sellers) in a market
+\end{block}
+\end{frame}
+
+\begin{frame}{Taxes}
+    Let's return to the market for coffee...
+
+    \begin{block}{Consider a $\$0.5$ tax on each cup of coffee levied on the sellers:}
+        \begin{itemize}
+            \item Does this cause a shift in supply or demand?
+            \item What will happen to $P^*$ or $Q^*$?
+            \item What portion falls on buyers and what portion falls on sellers?
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Taxes}
+    In this example, buyers and sellers share the incidence of the tax.
+
+    \begin{block}{Let's consider the same questions under the following extreme cases:}
+\begin{itemize}
+    \item Demand is perfectly inelastic
+    \item Supply is perfectly inelastic
+\end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Taxes \& Elasticity}
+\begin{itemize}
+    \item \textbf{Inelastic demand}: consumers buy the same amount of coffee no matter what $\implies$ consumers bear the entire incidence of the tax
+    \item \textbf{Inelastic supply}: suppliers provide the same amount of coffee no matter what $\implies$ suppliers bear the entire incidence of the tax
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Taxes \& Elasticity}
+   \begin{block}{ The relative elasticities determine the Tax Wedge: }
+       This tells us which side of the market pays the what portion of the tax.
+
+       \medskip
+
+       In general:
+       \begin{itemize}
+           \item Demand is more elastic than supply $\to$ \textit{suppliers} bear more of the burden
+           \item Supply is more elastic than demand $\to$ \textit{buyers} bear more of the burden
+       \end{itemize}
+   \end{block}
+
+   Really it is the \textbf{relative} elasticities which determine the wedge.
+\end{frame}
+\end{comment}
+
+\begin{frame}{Social Welfare}
+Some key vocabulary:
+\begin{itemize}
+    \item Willingness to pay: max price a buyer will pay for a good
+    \item Cost: value of everything a seller gives up to produce a good
+\end{itemize}
+
+\begin{block}{We have two notions of welfare surplus:}
+    \begin{itemize}
+        \item \textbf{Consumer surplus (CS):} amount a buyer is willing to pay minus the actual price they pay
+        \item \textbf{Producer surplus (PS): } amount a seller is paid for a good minus the sellers cost of producing it
+    \end{itemize}
+\end{block}
+
+    \medskip
+
+    What does this look like on a supply and demand graph?
+\end{frame}
+
+\begin{frame}{Social Welfare}
+\begin{block}{   We can also calculate the total surplus (TS) in society:}
+    \begin{align*}
+        \text{TS} &= (\text{value to buyers - price}) + (\text{price - cost to sellers})\\
+        &= \text{value to buyers} - \text{cost to sellers}
+    \end{align*}
+\end{block}
+
+\vspace{3mm}
+
+\textit{We say that a resource allocation is \textbf{efficient} if it maximizes total surplus.}
+\end{frame}
+
+\begin{frame}{Social Welfare}
+    \begin{block}{When there is a market distortion, the total surplus decreases:}
+        We call this Dead Weight Loss (DWL): the fall in total surplus resulting from a market distortion (like a price control or a tax)
+    \end{block}
+
+    \begin{block}{The DWL from a market distortion will depend on the relative elasticities of supply and demand:}
+        \begin{itemize}
+            \item Inelastic supply/demand $\implies$ small DWL
+            \item Elastic supply/demand $\implies$ large DWL
+        \end{itemize}
+    \end{block}
+    \begin{center}
+\textit{       ** The larger the distortion, the larger the DWL **
+}    \end{center}
+\end{frame}
+
+\begin{frame}{DWL Example}
+    \begin{block}{Let's consider the \textit{market for labor}...}
+    If we impose a binding \textbf{minimum wage law}, what happens to:
+    \begin{itemize}
+        \item producer surplus
+        \item consumer surplus
+        \item dead weight loss
+    \end{itemize}
+    \end{block}
+
+    \begin{block}{Now let's consider the \textit{market for NYC apartments}..}
+    If we impose a binding \textbf{rent control}, what happens to:
+    \begin{itemize}
+        \item producer surplus
+        \item consumer surplus
+        \item dead weight loss
+    \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\end{document}
