@@ -1,0 +1,195 @@
+\documentclass[12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Load in packages
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+\Large Chapter 14 Practice Problems
+
+\medskip
+
+\normalsize Elements of Microeconomics (discussion section 1)
+
+\medskip
+
+\small Rudy Kretschmar
+\end{center}
+
+\section*{Question 1}
+\begin{enumerate}[label = (\alph*)]
+    \item Draw a graph of cost curves (ATC, AVC, MC) and marginal revenue in a perfectly competitive market in the following situations and explain why they look the way they do:
+\begin{enumerate}[label = (\roman*)]
+    \item The firm should shutdown in the short run and should exit in the long run
+    \item The firm should remain open in the short run but should exit in the long run
+\end{enumerate}
+    \item In each of cases (i) and (ii) above, draw and shade the profits or losses for the firm in that situation.
+\end{enumerate}
+
+\textbf{Answer:}
+\begin{enumerate}[label = (\alph*)]
+    \item 
+    \begin{enumerate}[label = (\roman*)]
+        \item Shutdown in short run and exit in long run:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\linewidth]{W9 1ai.png}
+            \label{fig:placeholder}
+        \end{figure}
+        \newpage
+        \item Remain open in short run but exit in long run 
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\linewidth]{W9 1aii.png}
+            \label{fig:placeholder}
+        \end{figure}
+    \end{enumerate}
+    \item Both cases cause losses in the long run
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{W9 1b.png}
+        \label{fig:placeholder}
+    \end{figure}
+\end{enumerate}
+
+\newpage
+
+\section*{Question 2}
+Consider a firm in a perfectly competitive market which produces donuts. The firm has costs of production shown in the following table:
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccccc}
+    \hline
+        Q & Total FC & Total VC & AFC & AVC & ATC & MC \\
+        \hline
+        \hline
+         0 & 50 & 0 & & & &  \\
+         1 & 50 & 25 & & & & \\
+         2 & 50 & 35 & & & &  \\
+         3 & 50 & 55 & & & &  \\
+         4 & 50 & 90 & & & &  \\
+         5 & 50 & 150 & & & & \\
+         \hline
+    \end{tabular}
+    \caption{Costs of production for a donut firm}
+    \label{tab:placeholder}
+\end{table}
+
+\begin{enumerate}[label = (\alph*)]
+    \item Fill in the missing values in the table
+    \item The market price for a donut is \$35. Graph the ATC, AVC, MC, MR/P.
+    \item  Should the firm remain open in the short run? Should the firm exit the market in the long run? Use the shutdown and exit conditions to defend your assertions.
+\end{enumerate}
+
+\textbf{Answer:}
+\begin{enumerate}[label = (\alph*)]
+    \item Completed table:
+        
+        \begin{table}[H]
+        \centering
+        \begin{tabular}{ccccccc}
+        \hline
+            Q & Total FC & Total VC & AFC & AVC & ATC & MC \\
+            \hline
+            0 & 50 & 0   & --    & --     & --    & -- \\
+            1 & 50 & 25  & 50.00 & 25.00  & 75.00 & 25 \\
+            2 & 50 & 35  & 25.00 & 17.50  & 42.50 & 10 \\
+            3 & 50 & 55  & 16.67 & 18.33  & 35.00 & 20 \\
+            4 & 50 & 90  & 12.50 & 22.50  & 35.00 & 35 \\
+            5 & 50 & 150 & 10.00 & 30.00  & 40.00 & 60 \\
+            \hline
+        \end{tabular}
+        \caption{Costs of production for a donut firm - complete}
+        \label{tab:placeholder}
+        \end{table}
+
+    \item Graph:
+    
+        \begin{center}
+        % You can change this price value if needed:
+        \def\price{35}
+
+        \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle,
+            xlabel={$Q$},
+            ylabel={$P$},
+            xmin=0, xmax=6,
+            ymin=0, ymax=80,
+            xtick={0,1,2,3,4,5},
+            ytick={0,10,20,30,40,50,60,70,80},
+            grid=both,
+            legend style={at={(0.98,0.98)},anchor=north east, fill=white, draw=none},
+            every axis x label/.style={at={(current axis.right of origin)}, anchor=west},
+            every axis y label/.style={at={(current axis.above origin)}, anchor=south}
+        ]
+
+        % --- ATC ---
+        \addplot[thick, blue, mark=*] coordinates {
+            (1,75.00)
+            (2,42.50)
+            (3,35.00)
+            (4,35.00)
+            (5,40.00)
+        };
+        \addlegendentry{ATC}
+
+        % --- AVC ---
+        \addplot[thick, teal, dashed, mark=*] coordinates {
+            (1,25.00)
+            (2,17.50)
+            (3,18.33)
+            (4,22.50)
+            (5,30.00)
+        };
+        \addlegendentry{AVC}
+
+        % --- MC ---
+        \addplot[thick, red, mark=triangle*] coordinates {
+            (1,25)
+            (2,10)
+            (3,20)
+            (4,35)
+            (5,60)
+        };
+        \addlegendentry{MC}
+
+        % --- MR = Price line ---
+        \addplot[thick, black, domain=0:6] {\price} node[pos=0.92, above right] {$MR = P = \price$};
+
+        \end{axis}
+        \end{tikzpicture}
+        \end{center}
+
+    \item The firm should remain open in the short run. The short run shutdown condition says to shut down if $AVC > P$. In this market the Price is \$35 and the quantity where MC = MR/P is 4. The AVC at 4 is \$22.50. Since $\$22.50 < \$35 $, the firm shoudl remian open in the short run. \\
+    The firm should also remain open in the long run. The long run exit condition says to exit if $ATC < P$. In this market the $ATC$ at $P = \$35 $ is \$35. So the firm should remain open in the long run.
+\end{enumerate}
+
+
+
+
+\section*{Question 3}
+Explain why the short run shutdown condition and long run enter/exit conditions are different. What is the key factor considered in the long run that is not considered in the short run?
+
+\vspace{3mm}
+
+\textbf{Answer:} \\
+In the short run, a firm faces some fixed costs, expenses that must be paid even if the firm produces nothing (like rent, equipment, or insurance). Because these costs are \textit{\textbf{sunk}} in the short run, the firm’s decision to produce depends only on whether it can cover its \textit{variable costs.}
+In the long run, all costs become variable, and firms can enter or exit the industry freely. There are no fixed costs that must be paid regardless of output, so the decision depends on whether the firm can cover total costs (both fixed and variable).
+
+\end{document}

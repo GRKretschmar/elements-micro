@@ -1,0 +1,380 @@
+\documentclass[compress]{beamer}
+%\documentclass[handout]{beamer}
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \mode<beamer>{\setbeamertemplate{blocks}[rounded][shadow=true]}
+  \setbeamertemplate{caption}[numbered]
+  \useoutertheme{infolines}
+  \useoutertheme[subsection=false]{miniframes}
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{comment}
+% set colors
+\definecolor{myNewColorA}{RGB}{0, 45,114}
+\definecolor{myNewColorB}{RGB}{0, 45,114}
+\definecolor{myNewColorC}{RGB}{0, 45,114} % {130,138,143}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\setbeamercolor{date in head/foot}{fg=white}
+\setbeamercolor{page number in head/foot}{fg=white}
+
+
+\titlegraphic{%
+\vspace{0cm}
+    \includegraphics[width=4cm]{logo-vertical2.png}
+}
+
+\usepackage{subcaption}
+% \usepackage{mathrsfs}
+
+\usepackage{dirtytalk}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{threeparttable}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage{colortbl}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\usepackage{pdfpages}
+
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+%\usepackage{enumitem}
+
+%% References - BEGIN
+\usepackage[backend=bibtex8,style=authoryear-icomp,doi=false,url=false,isbn=false,eprint=false]{biblatex}
+\renewbibmacro{in:}{}		% gets rid of the 'In' in front of the journal name
+%\bibliographystyle{natbib}        
+% \bibliography{references.bib}
+
+% diagram (tree)
+\usepackage{tikz}
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white,
+                     bottom color=blue!20},
+  root/.style     = {treenode, font=\Large,
+                     bottom color=red!30},
+  env/.style      = {treenode, font=\ttfamily\normalsize},
+  dummy/.style    = {circle,draw}
+}
+% Title page details: 
+\title{Chapter 13 \& 15: Production Costs \& Competitive Markets} 
+\author{Rudy Kretschmar \\
+    Discussion section 1}
+\date{\today}
+
+\begin{document}
+
+% Title page
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\begin{frame}{Outline}
+    Today we will talk about:
+    \begin{itemize}
+        \item Costs of Production!
+        \item Firms in Competitive Markets (Time Permitting)
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Costs of Production}
+    A firm aims to maximize their profit:
+    \[\text{Profit} = \text{total revenue} - \text{total cost}\]
+\begin{itemize}
+    \item total revenue: \(TR = P \times Q\)
+    \item total cost is the sum of all \textbf{implicit} and \textbf{explicit} costs of inputs to production
+    \begin{itemize}
+        \item \textbf{Implicit}: input costs which \textit{do not} require monetary outlay from the firm
+        \item  \textbf{Explicit}: input costs which \textit{do} require a monetary outlay from the firm
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Types of Profit}
+    There are two types of profit we can consider:
+    \begin{block}{Economic Profit:}
+        total revenue less implicit \textit{and} explicit costs
+    \end{block}
+
+    \begin{block}{Accounting}
+        total revenue less explicit costs \textit{only}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Costs}
+\begin{block}{Types of costs:}
+    \begin{itemize}
+    \item Fixed costs: costs that do not vary with Q
+    \item Variable costs: costs that vary with Q
+\end{itemize}
+\end{block}
+
+\begin{block}{Measures of costs:}
+\begin{itemize}
+    \item Average total cost (ATC): \(ATC = TC/Q\)
+    \item Average fixed cost (AFC): \(AFC = FC/Q\)
+    \item Average variable cost (AVC): \(AVC = VC/Q\)
+    \item Marginal Cost: \(MC = \Delta TC/\Delta Q\)
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Example}
+    Consider a firm which produces pizzas:
+    
+    \vspace{3mm}
+    
+     A worker costs \$100 and the firm has fixed costs of \$200. 
+     
+     \vspace{3mm}
+     
+         The following table shows the number of pizzas produced given varying numbers of workers. Let's add information for the marginal product, total cost, average total cost, and marginal cost.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{cc}
+            Workers & Output \\
+            \hline
+            0 & 0 \\
+            1 & 20 \\
+            2 & 45 \\
+            3 & 80 \\
+            4 & 100 \\
+            5 & 110 \\
+        \end{tabular}
+
+        \label{tab:placeholder}
+    \end{table}
+\end{frame}
+
+\begin{frame}{What do costs look like?}
+    \begin{itemize}
+        \item We tend to assume (like in previous example) that the marginal product of labor is decreasing... Why?
+        \item Average fixed cost falls as output rises because the same fixed cost is spread over more units.
+        \item Average variable cost typically falls at first and then rises: initially, workers can specialize and use fixed inputs more effectively, but eventually diminishing marginal product sets in.
+        \item Marginal cost also often has a U-shape because when marginal product is rising, each additional unit is relatively cheap to produce, but when marginal product falls, each additional unit becomes more costly.
+        \item Average total cost is the sum of average fixed cost and average variable cost, so it often has a U-shape: it falls at first, then rises once the increase in AVC outweighs the continued decline in AFC.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{What do costs look like?}
+\begin{figure}
+        \centering
+        \includegraphics[width=0.65\linewidth]{W8 uTC.png}
+        \caption{Relationship between costs}
+        \label{fig:placeholder}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{More Realistic Cost curves}
+Let's remember what our cost curves look like:
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\linewidth]{W9 graph1.png}
+    \caption{Realistic Cost Curves}
+    \label{fig:placeholder}
+\end{figure}
+\end{frame}
+
+\begin{frame}{A Final Piece of Intuition}
+
+The marginal cost curve intersects average total cost at the minimum of ATC: if MC is below ATC, producing one more unit pulls the average down; if MC is above ATC, producing one more unit pushes the average up.
+
+\end{frame}
+
+
+\begin{frame}{Economies and Diseconomies of Scale}
+    We can define the scale of production in the following 3 ways:
+    \begin{enumerate}
+        \item Economies of Scale: Long run ATC declines as Q increases
+        \item Diseconomies of Scale: Long run ATC increases as Q increases
+        \item Constant returns to scale: Long run ATC stays the same as Q changes
+    \end{enumerate}
+\end{frame}
+
+
+
+
+\begin{frame}{Competitive markets}
+    \begin{block}{Let's recall what we mean by "competitive market":}
+        \begin{itemize}
+            \item Many buyers and sellers $\implies$ No single buyer or seller has influence over price
+            \item The goods/services being sold are homogeneous
+            \item Firms can freely enter/exit the market \textit{(this is new!)}
+        \end{itemize}
+    \end{block}
+    \begin{block}{What does this mean for firms?}
+        \begin{itemize}
+            \item Firms are price takers
+            \begin{itemize}
+                \item $P$ remains constant for a firm at any level of $Q$ $\implies$ $MR = P$
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Competitive Markets}
+\textbf{    Firms in competitive markets want to maximize their profit.
+}
+    \vspace{5mm}
+
+    Recall that profit is:
+    \[\pi = TR - TC\]
+    
+    Total revenue (TR) is:
+    \[TR = P\times Q\]
+
+    \begin{block}{We also consider average and marginal revenue:}
+        \begin{itemize}
+            \item Average revenue: \(AR = \frac{TR}{Q} = \frac{P\times Q}{Q} = P\)
+            \item Marginal revenue: \(MR = \frac{\Delta TR}{\Delta Q}\) \quad ($=P$ in a competitive market)
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Optimal Choices in a competitive market}
+    Firms will always maximize their profit when they choose to produce the $Q$ where $MR = MC$!
+    \vspace{3mm}
+    \begin{itemize}
+        \item This is a direct result of the firms thinking on the margin:
+        \begin{itemize}
+            \item If $MR > MC$ the firm should increase $Q$
+            \item If $MR < MC$ the firm should decrease $Q$
+        \end{itemize}
+        \item \textbf{** The only $Q$ where they do not want to make a change is the $Q$ where $MR = MC$ **}
+    \end{itemize}
+
+\vspace{5mm}
+
+Because MC determines $Q$ for any $P$ (we look for $Q$ such that $MR = MC$ and in a competitive market $MR = P$), the MC curve is the supply curve for a \textit{competitive} firm
+\end{frame}
+
+\begin{frame}{}
+    Let's fill in the following table:
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{W9 graph2.png}
+        \label{fig:placeholder}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Firm Shutdown}
+    Importantly, a firm does not want to operate at a loss (negative profit)
+
+    \vspace{4mm}
+
+    In the short run, a firm decides whether to remain open or shut down \textit{for a period of time} (Not permanently!!!)
+
+    \begin{block}{A firm should shutdown in the short run if:}
+        \[P < AVC\]
+        \begin{itemize}
+            \item If the firm earns less per unit sold than the \textbf{variable cost} of producing that unit, they should shut down
+            \item In the SR, there are fixed costs (rent, machines, etc.) that must be paid for whether or not the firms shuts down temporarily
+            \begin{itemize}
+                \item These costs are called \textbf{\textit{sunk costs,}} and we don't consider them in short term decisions 
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Firm Exit}
+    Importantly, a firm does not want to operate at a loss (negative profit)
+
+    \vspace{4mm}
+
+    In the long run, a firm decides whether to remain in the market or exit the market \textit{(Permanently!!!)}
+
+    \begin{block}{A firm should exit the market in the long run if:}
+        \[TR < TC \iff P < ATC\]
+        \begin{itemize}
+            \item If the firm earns less per unit sold than the \textit{total cost} of producing that unit, they should exit the market
+            \item We consider fixed costs in the long run because we can end our lease on the building/sell the machines in the long run
+            \begin{itemize}
+                \item \textit{These costs are not sunk in the long run}
+            \end{itemize}
+            \item We can say that a firm should enter the market if the inequality is reversed
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Supply curves}
+    The supply curve of a competitive firm is the portion of their MC curve where they remain in the market, which is different in the short and long run...
+
+    \begin{block}{In the short run}
+        \begin{itemize}
+            \item Supply is 0 when \(MC<AVC\) \quad ($MC = MR = P$)
+            \item Supply curve is the portion of MC curve which lies above the AVC curve
+        \end{itemize}
+    \end{block}
+
+        \begin{block}{In the long run}
+        \begin{itemize}
+            \item Supply is 0 when \(MC<ATC\)
+            \item Supply curve is the portion of MC curve which lies above the ATC curve
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{How does shutdown/exit affect market equilibrium?}
+    \begin{block}{In the short run...}
+        Firms may shutdown $\implies$ we may be pushed away from equilibrium
+    \end{block}
+
+    \begin{block}{In the long run...}
+        Firms may exit the market $\implies$ supply shifts left (less sellers)
+        \begin{itemize}
+            \item Drives prices up
+            \item More firms enter the market because the price is higher
+            \item Price drops back to the equilibrium level
+        \end{itemize}
+
+        \begin{itemize}
+            \item Firms that remain in the market must be making zero economic profit ($MC = MR$)
+            \item Entry/Exit only stops when $ATC = MR = MC = P$
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Graphing the market}
+    Let's graph and calculate/shade the short run profit for a firm in the following two scenarios:
+
+    \vspace{3mm}
+    
+    \begin{enumerate}
+        \item $MC > AVC$ and $MC > ATC$
+        \item $MC > AVC$ but $MC < ATC$
+    \end{enumerate}
+
+    \vspace{6mm}
+
+    Now imagine the same firms in the long run... what does the long run profit look like on the graphs?
+\end{frame}
+
+\end{document}
