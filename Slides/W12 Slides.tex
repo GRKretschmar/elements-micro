@@ -1,0 +1,251 @@
+\documentclass[compress]{beamer}
+%\documentclass[handout]{beamer}
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \mode<beamer>{\setbeamertemplate{blocks}[rounded][shadow=true]}
+  \setbeamertemplate{caption}[numbered]
+  \useoutertheme{infolines}
+  \useoutertheme[subsection=false]{miniframes}
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{comment}
+% set colors
+\definecolor{myNewColorA}{RGB}{0, 45,114}
+\definecolor{myNewColorB}{RGB}{0, 45,114}
+\definecolor{myNewColorC}{RGB}{0, 45,114} % {130,138,143}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\setbeamercolor{date in head/foot}{fg=white}
+\setbeamercolor{page number in head/foot}{fg=white}
+
+
+\titlegraphic{%
+\vspace{0cm}
+    \includegraphics[width=4cm]{logo-vertical2.png}
+}
+
+\usepackage{subcaption}
+% \usepackage{mathrsfs}
+
+\usepackage{dirtytalk}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{threeparttable}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage{colortbl}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\usepackage{pdfpages}
+
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+%\usepackage{enumitem}
+
+%% References - BEGIN
+\usepackage[backend=bibtex8,style=authoryear-icomp,doi=false,url=false,isbn=false,eprint=false]{biblatex}
+\renewbibmacro{in:}{}		% gets rid of the 'In' in front of the journal name
+%\bibliographystyle{natbib}        
+% \bibliography{references.bib}
+
+% diagram (tree)
+\usepackage{tikz}
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white,
+                     bottom color=blue!20},
+  root/.style     = {treenode, font=\Large,
+                     bottom color=red!30},
+  env/.style      = {treenode, font=\ttfamily\normalsize},
+  dummy/.style    = {circle,draw}
+}
+
+% Title page details: 
+\title{Chapter 15: Monopoly} 
+\author{Rudy Kretschmar \\
+    Discussion section 1}
+\date{April 16, 2026}
+
+\begin{document}
+
+% Title page
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\begin{frame}{Outline}
+    Today we will talk about:
+    \vspace{3mm}
+    \begin{itemize}
+        \item Monopoly (not the board game)
+        \begin{itemize}
+            \item barriers to entry
+            \item profit maximization
+            \item social welfare
+            \item price discrimination
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{What is a Monopoly?}
+    \begin{block}{A monopoly is...}
+        A firm that is the sole seller of a product without any close substitutes
+
+        \vspace{2mm}
+
+        $\to$ Caused by barriers to entry in the market
+    \end{block}
+    Examples of monopolies include:
+    \begin{itemize}
+        \item local utilities
+        \item local internet providers
+        \item railroads
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Barriers to entry}
+What are barriers to entry?
+
+\vspace{2mm}
+
+\begin{block}{Monopoly resources:}
+    A key resource required for production is owned by a single firm
+\end{block}
+
+\begin{block}{Government Regulations:}
+    The government gives a single firm the exclusive right to produce some good or service
+\end{block}
+
+\begin{block}{The production process:}
+    A single firm can produce output at a lower cost than can a larger number of firms $\to$ \textbf{natural monopoly}
+\end{block}
+\end{frame}
+
+\begin{frame}{Monopoly vs. Competitive Firms}
+    \begin{block}{Key difference...}
+    \begin{itemize}
+        \item Firms in a competitive market are \textbf{price takers}
+        \item Monopoly firms are \textbf{price setters}
+        \end{itemize}
+    \end{block}
+
+    \vspace{2mm}
+
+    How does the demand curve for a monopoly curve differ from that of a competitive firm?
+
+\pause
+    \begin{itemize}
+        \item Competitive firm: $MR = P^* \to $ firms demand curve is the $MR$ curve
+        \item Monopoly firm: demand curve is equal to the market demand curve
+        \begin{itemize}
+            \item the market demand prevents monopolies from setting crazy prices - if they did that nobody would buy anything
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Monopoly revenue}
+    Let's fill in the following table...
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{W12 chart.png}
+        \label{fig:placeholder}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Monopoly Revenue}
+\begin{itemize}
+    \item $AR = P$: true for both monopoly and competitive firms.
+    \item $MR < P$: true only for monopoly firms.
+    \begin{itemize}
+        \item Recall: $MR = P$ for competitive firms.
+    \end{itemize}
+    \item A monopoly’s total revenue is $TR = P \times Q$; the monopolist chooses $P$ and $Q$.
+\end{itemize}
+
+\begin{block}{There is a revenue tradeoff:}
+        \begin{itemize}
+            \item \textbf{Output effect:} $\uparrow Q \implies \uparrow TR$ because more units are sold.
+            \item \textbf{Price effect:} $\uparrow Q \implies \downarrow P$, which reduces $TR$.
+        \end{itemize}
+
+    $MR$ becomes negative when the price effect exceeds the output effect.
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Profit maximization}
+  \begin{block}{How does any firm choose which quantity to produce? }
+    Set $MC = MR$!
+  \end{block}
+  \vspace{2mm}
+  This is the same for competitive and monopoly firms... But:
+  \begin{itemize}
+      \item For a monopoly - $P > MR = MC$
+      \item For a competitive firm - $P = MR = MC$
+  \end{itemize}
+  
+  \vspace{3mm}
+
+  Profit is still calculated the same way :
+  \[\pi = (P - ATC)\times Q\]
+\end{frame}
+
+\begin{frame}{Social welfare}
+    \begin{block}{What is the socially optimal $Q$?}
+        $Q$ where $MC = $ the demand curve
+    \end{block}
+
+    Since the $MR$ curve is less than the $D$ curve when $Q>0 \implies$ the socially optimal $Q^{SE} > Q^M $, the monopolists profit maximizing $Q$. 
+
+    \vspace{3mm}
+
+    This means that when a monopoly firm produces at $Q^M$, there is some deadweight loss!
+    \begin{itemize}
+        \item DWL similar to taxes... what is the difference here?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Price discrimination}
+    When monopoly firms produce at $Q^M$, price is higher than the socially optimal level $\to$ DWL
+
+    \begin{block}{Firms can\textbf{ Price Discriminate} to appeal to more consumers:}
+        price discriminating is the business practice of selling the same good at different prices to different customers
+        \begin{itemize}
+            \item Why might a firm want to price discriminate?
+            \item What are some examples of price discrimination?
+            \item How would price discrimination affect social welfare?
+        \end{itemize}
+    \end{block}
+
+    \vspace{2mm}
+
+    What is perfect price discrimination? \pause $\to$ Each person who values the good at more than the $MC$ of the firm buys the good and is charged exactly their willingness to pay
+\end{frame}
+
+
+
+\end{document}

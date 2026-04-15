@@ -1,0 +1,487 @@
+\documentclass[compress]{beamer}
+%\documentclass[handout]{beamer}
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \mode<beamer>{\setbeamertemplate{blocks}[rounded][shadow=true]}
+  \setbeamertemplate{caption}[numbered]
+  \useoutertheme{infolines}
+  \useoutertheme[subsection=false]{miniframes}
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{comment}
+% set colors
+\definecolor{myNewColorA}{RGB}{0, 45,114}
+\definecolor{myNewColorB}{RGB}{0, 45,114}
+\definecolor{myNewColorC}{RGB}{0, 45,114} % {130,138,143}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\setbeamercolor{date in head/foot}{fg=white}
+\setbeamercolor{page number in head/foot}{fg=white}
+
+
+\titlegraphic{%
+\vspace{0cm}
+    \includegraphics[width=4cm]{logo-vertical2.png}
+}
+
+\usepackage{subcaption}
+% \usepackage{mathrsfs}
+
+\usepackage{dirtytalk}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{threeparttable}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage{colortbl}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\usepackage{pdfpages}
+
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+%\usepackage{enumitem}
+
+%% References - BEGIN
+\usepackage[backend=bibtex8,style=authoryear-icomp,doi=false,url=false,isbn=false,eprint=false]{biblatex}
+\renewbibmacro{in:}{}		% gets rid of the 'In' in front of the journal name
+%\bibliographystyle{natbib}        
+% \bibliography{references.bib}
+
+% diagram (tree)
+\usepackage{tikz}
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white,
+                     bottom color=blue!20},
+  root/.style     = {treenode, font=\Large,
+                     bottom color=red!30},
+  env/.style      = {treenode, font=\ttfamily\normalsize},
+  dummy/.style    = {circle,draw}
+}
+
+% Title page details: 
+\title{Chapters 16 \& 17: Monopolistic Competition \& Oligopoly} 
+\author{Rudy Kretschmar (Discussion section 1)}
+\date{April 23, 2026}
+
+\begin{document}
+
+% Title page
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\begin{frame}{Outline}
+    Today we will talk about:
+    \vspace{3mm}
+    \begin{itemize}
+        \item Monopolistic competition
+        \begin{itemize}
+            \item short vs. long run
+            \item entry and exit
+            \item efficiency and externalities
+        \end{itemize}
+        \item Advertising
+        \item Oligopoly
+        \begin{itemize}
+            \item Oligopolies and Duopolies
+            \item Oligopoly production choices
+            \item Collusion and Cartels
+            \item The Prisoner's Dilemma
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Monopolistic Competition}
+    \begin{block}{What is monopolistic competition?}
+    Many firms sell products that are similar but not identical
+        \begin{itemize}
+            \item Many buyers and sellers
+            \item Products are \textit{similar but not identical}
+            \item Free entry and exit (in the long run)
+        \end{itemize}
+    \end{block}
+    \begin{center}
+        What are some examples?
+    \end{center}
+\end{frame}
+
+\begin{frame}{Monopolistic Competition}
+    Just like any other type of market...
+    \begin{center}
+        \textbf{Firms maximize profit when they set $MR = MC$!}
+    \end{center}
+    \begin{block}{What will the firms demand curve look like?}
+    \pause
+        \begin{itemize}
+            \item Firms are not price takers - they have some market power due to differentiated products
+            \item Firm demand will resemble that of a monopoly
+            \item It is downward sloping!
+        \end{itemize}
+    \end{block}
+    \vspace{4mm}
+\begin{center}
+    Let's draw this market...
+\end{center}
+\end{frame}
+
+\begin{frame}{Short vs. Long run}
+    \begin{block}{In the short-run:}
+        \begin{itemize}
+            \item If $P > ATC \implies$ positive $\pi$
+            \item If $P < ATC \implies$ loss
+As long as $P > AVC$, the firm continues to operate
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{In the long-run:}
+        \begin{itemize}
+            \item When firms make losses in the SR $\implies$ exit
+            \begin{itemize}
+                \item $\to$ increases demand for each existing firm
+                \item $\to$ $\uparrow P \quad \& \; \uparrow \pi$
+            \end{itemize}
+            \item When firms make positive $\pi \implies$ new firms enter \& produce close substitutes
+            \begin{itemize}
+                \item $\to$ reduces demand for each existing firm
+                \item $\to$ $\downarrow P \quad\& \; \downarrow \pi$
+            \end{itemize}
+        \end{itemize}
+\begin{center}
+\textbf{** entry/exit $\implies$ all firms earn 0 economic $\pi$ in LR!! **}
+\end{center}
+    \end{block}
+\end{frame}
+
+\begin{frame}{In the long run...}
+Two important characteristics of monopolistic competition:
+    \begin{enumerate}
+        \item As in a monopoly market: $MC < P$ - \textbf{Markup}
+        \begin{itemize}
+            \item maximizing $\pi$ means setting $MR = MC$, and $MR < $ demand curve, which gives us price
+            \item So $MR < P$
+        \end{itemize}
+    \item As in a competitive market: $P = ATC$ - \textbf{No profits}
+    \begin{itemize}
+        \item free entry and exit drive economic profit to 0
+    \end{itemize}
+    \end{enumerate}
+\vspace{3mm}
+    The optimal $Q$ for a monopolistically competitive firm is $Q$ such that:
+    \begin{enumerate}
+        \item $MR = MC$
+        \item $ATC$ is tangent to (kisses) the firms demand curve
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Monopolistic vs. Perfect Competition}
+    Two key differences:
+    \begin{block}{Excess capacity:}
+        The \textbf{efficient scale} is the $Q$ which minimizes $ATC$
+        \begin{itemize}
+            \item A monopolistically competitive firm has excess capacity:
+            \begin{itemize}
+                \item They could $\uparrow Q$ and that would $\downarrow ATC$
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Markup:}
+        A monopolistically competitive firm operates where:
+        \begin{itemize}
+            \item $ATC$ is decreasing $\to$ where $MC < ATC$
+            \item $\implies MC < P$
+            \item firms want to induce additional demand
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Monopolistic competition and welfare}
+\textbf{Externality:} uncompensated impact of one person/firms actions on a bystander person/firm
+\begin{itemize}
+    \item Positive externality: surplus of bystander goes up
+    \item Negative externality: surplus of bystander goes down
+\end{itemize}
+
+\begin{block}{How does firm entry affect a monopolistically competitive market?}
+    \begin{itemize}
+    \item \textbf{Product-variety externality:} positive externality on consumers
+    \item \textbf{Business-stealing externality:} negative externality on sellers
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Advertising}
+    \begin{block}{What is the point of advertising?}
+        \begin{itemize}
+            \item \textit{Informs}: conveys prices and locations of goods, introduces new products
+            \item \textit{Misleads}: convinces that substitutes are more distinct than they really are
+            \item \textit{Signals}: willingness to spend money to advertise indicates high quality
+        \end{itemize}
+    \end{block}
+    \vspace{4mm}
+
+    Is this good or bad for welfare?
+    \quad We don't really know!
+\end{frame}
+
+
+\begin{frame}{What is an Oligopoly?}
+    \begin{block}{An \textbf{oligopoly} is a market in which:}
+        \begin{itemize}
+            \item there are only a few sellers
+            \item they offer similar or identical products
+        \end{itemize}
+    \end{block}
+\vspace{2mm}
+    A \textbf{Duopoly} is an oligopoly with only 2 sellers
+    \begin{itemize}
+        \item We usually consider duopolies since they have the same outcomes/properties as larger oligopolies
+    \end{itemize}
+
+    \begin{center}
+        \textit{What are some examples?}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Our different types of markets}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.65\linewidth]{W13 chart.png}
+        \caption{Caption}
+        \label{fig:placeholder}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Oligopoly profits}
+    Verizon and Xfinity are a duopoly for internet service in Baltimore. Let's assume $MC$ of providing service to each customer is \$40. The demand schedule for internet service in Baltimore is:
+    \begin{table}
+    \centering
+    \begin{tabular}{c|r}
+        Price & Quantity \\
+        \hline
+        \$180 & 5,000 customers \\ 
+        \$160 & 6,000 \\ 
+        \$140 & 7,000 \\ 
+        \$120 & 8,000 \\ 
+        \$100 & 9,000 \\ 
+        \$80 & 10,000 \\ 
+        \$60 & 11,000 \\ 
+        \$40 & 12,000 \\
+    \end{tabular}
+    \label{tab:placeholder}
+\end{table}
+
+What would the market $P$ and $Q$ be if this was a \textit{monopoly market}? What about a \textit{perfectly competitive market}?
+\end{frame}
+
+\begin{frame}{How does an Oligopoly determine $P^*$ \& $Q^*$?}
+    When there are a small number of firms, as in an oligopoly, those firms can collude...
+    \begin{block}{\textbf{Collusion} is when:}
+       oligopoly firms make an agreement over prices and production
+    \end{block}
+    \begin{block}{A \textbf{cartel} is:}
+        A group of oligopoly firms which are colluding together
+    \end{block}
+\end{frame}
+
+\begin{frame}{}
+Given these definitions, 
+    \begin{itemize}
+    \item Can Verizon and Xfinity collude?
+    \item Would they want to? Why?
+    \item What would this look like?
+\end{itemize} 
+
+\vspace{4mm}
+
+We know that the monopoly $P$ \& $Q$ result in the highest possible profit for the monopoly firm...
+\begin{itemize}
+    \item Verizon and Xfinity can act together as a single monopoly by colluding!
+    \item How? $\to$ Set the sum of their production as the monopoly quantity and charge the monopoly price
+    \item Choose how to split production among the two firms
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+    Let's say Verizon and Xfinity collude and produce the monopoly $P$ \& $Q$ and split production 50-50:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+        Price & Quantity & Market \; $\pi$ & Verizon \; $\pi$ & Xfinity \; $\pi$ \\
+        \hline
+        \$180 & 5,000 & \$700,000 & \$350,000 & \$350,000\\ 
+        \textcolor{red}{\$160} & 
+        \textcolor{red}{6,000} & 
+        \textcolor{red}{\$720,000} & 
+        \textcolor{red}{\$360,000} & 
+        \textcolor{red}{\$360,000}\\ 
+        \$140 & 7,000 & \$700,000 & \$350,000 & \$350,000\\ 
+        \$120 & 8,000 & \$640,000 & \$320,000 & \$320,000\\ 
+        \$100 & 9,000 & \$540,000 & \$270,000 & \$270,000\\ 
+        \$80 & 10,000 & \$400,000 & \$200,000 & \$200,000\\ 
+        \$60 & 11,000 & \$220,000 & \$110,000 & \$110,000\\ 
+        \$40 & 12,000 & \$0 & \$0 & \$0\\
+    \end{tabular}
+    \label{tab:placeholder}
+\end{table}
+\end{frame}
+
+\begin{frame}{}
+    If Verizon decide's to increase the quantity of internet service they provide by 1,000, but Xfinity makes no change, the new market production is 7,000:
+    
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+        Price & Quantity & Market \; $\pi$ & Verizon \; $\pi$ & Xfinity \; $\pi$ \\
+        \hline
+        \$180 & 5,000 & \$700,000 & \$350,000 & \$350,000\\ 
+        \$160 & 6,000 & \$720,000 & \$360,000 & \$360,000\\ 
+    \textcolor{red}{\$140} & \textcolor{red}{7,000} & \textcolor{red}{\$700,000} & \textcolor{red}{\$400,000} & \textcolor{red}{\$300,000}\\ 
+        \$120 & 8,000 & \$640,000 & \$320,000 & \$320,000\\ 
+        \$100 & 9,000 & \$540,000 & \$270,000 & \$270,000\\ 
+        \$80 & 10,000 & \$400,000 & \$200,000 & \$200,000\\ 
+        \$60 & 11,000 & \$220,000 & \$110,000 & \$110,000\\ 
+        \$40 & 12,000 & \$0 & \$0 & \$0\\
+    \end{tabular}
+    \label{tab:placeholder}
+\end{table}
+Verizon broke the agreement by increasing production, and is now earning more profit than under the collusion agreement. Xfinity is left worse off.
+\end{frame}
+
+\begin{frame}{}
+    But if Xfinity knows Verizon will increase production by 1,000, they will want to increase their production by the same amount to mitigate the loss of profit:
+   \begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+        Price & Quantity & Market \; $\pi$ & Verizon \; $\pi$ & Xfinity \; $\pi$ \\
+        \hline
+        \$180 & 5,000 & \$700,000 & \$350,000 & \$350,000\\ 
+        \$160 & 6,000 & \$720,000 & \$360,000 & \$360,000\\ 
+        \$140 & 7,000 & \$700,000 & \$350,000 & \$350,000\\ 
+        \textcolor{red}{\$120} &
+        \textcolor{red}{8,000} &
+        \textcolor{red}{\$640,000} &
+        \textcolor{red}{\$320,000} &
+        \textcolor{red}{\$320,000}\\
+        \$100 & 9,000 & \$540,000 & \$270,000 & \$270,000\\ 
+        \$80 & 10,000 & \$400,000 & \$200,000 & \$200,000\\ 
+        \$60 & 11,000 & \$220,000 & \$110,000 & \$110,000\\ 
+        \$40 & 12,000 & \$0 & \$0 & \$0\\
+    \end{tabular}
+    \label{tab:placeholder}
+\end{table}
+But Verizon still has incentive to increase their production without telling Xfinity, and so Xfinity will also want to increase production...
+\end{frame}
+
+\begin{frame}{Nash Equilibrium}
+    The interaction between Verizon and Xfinity tells us something about the strategic behavior of oligopolies...
+
+    \begin{block}{A nash equilibrium is:}
+        A set of strategies such that economic actors interacting together each choose their best strategy given the strategies that the others have chosen
+    \end{block}
+    \vspace{4mm}
+    When Verizon and Xfinity act in their own self interest by increasing production, they lose out on profit.\\
+    $\to$ So they would rather collude to produce monopoly $P$ \& $Q$
+    \begin{center}
+        \textit{But will they cooperate? Is this easy?}
+    \end{center}
+\end{frame}
+
+\begin{frame}{The Prisoner's Dilemma}
+    Let's consider a "Game" called the Prisoner's Dilemma:
+    \begin{itemize}
+        \item 2 criminals (Bonnie and Clyde) stole \$100 and were caught
+        \item Each has the option: Confess or Stay silent
+        \item There are 3 possible outcomes
+        \begin{itemize}
+            \item Both stay silent = they keep \$100 and split it 50-50
+            \item One confesses and the other remains silent = silent one gets nothing while confessor gets \$60
+            \item Both confess: they split the \$60 reward 50-50
+        \end{itemize}
+    \end{itemize}
+\begin{center}
+    What does this look like? How do we find the nash equilibrium?
+\end{center}
+\end{frame}
+
+\begin{frame}{Cooperation}
+    \begin{itemize}
+        \item Cooperation is hard to maintain!  \quad Even when it would make you better off
+        \item The same principles apply to oligopolies and their choice of production
+        \begin{itemize}
+            \item collusion at the monopoly $P$ \& $Q$ is rational for both providers
+            \item BUT each firm has an incentive to cheat
+            \item and each firm anticipates the other cheating
+        \end{itemize}
+    \end{itemize}
+
+
+
+\vspace{1cm}
+    \begin{center}
+    So do oligopoly firms ever actually form cartels?
+    \end{center}
+\end{frame}
+
+\begin{frame}{Externaltities}
+   
+   Recall... \textbf{Externality:} uncompensated impact of one person/firms actions on a bystander person/firm
+\begin{itemize}
+    \item Positive externality: surplus of bystander goes up
+    \item Negative externality: surplus of bystander goes down
+\end{itemize}
+\vspace{2mm}
+We can \textbf{internalize an externality}\\
+\quad $\to$ alter incentives so that people take the external impacts of their actions into account
+
+\begin{itemize}
+    \item Externalities are often cited as reasons for government intervention:
+    \begin{itemize}
+        \item \textbf{Corrective/Pigouvian tax:} a tax designed to alter buyer demand through changes in price to bring the market equilibrium quantity closer to the social optimal level
+        \item Forces individuals to internalize the external impacts of their actions
+        \item Examples?
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Internalizing an externality}
+\begin{block}{Consider the market for cigarettes}
+    \begin{itemize}
+        \item Second hand smoke is bad for bystanders $\to$ cigarettes cause a negative externality
+        \item So the socially optimal quantity $Q^{SO} < Q^*$, the equilibrium quantity 
+    \end{itemize}
+    \begin{center}
+        \textit{The government can tax cigarettes to reduce the equilibrium quantity to the socially optimal level}
+    \end{center}
+\end{block}
+\vspace{3mm}
+** What does this look like?
+\end{frame}
+
+\end{document}
